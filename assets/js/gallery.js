@@ -58,6 +58,13 @@ if (gallery) {
     items.forEach((item, i) => {
       const { width, height, top, left } = layout.boxes[i];
       item.style.position = "absolute";
+      // Clears the aspect-ratio set inline in gallery.html (a real value for
+      // images, always a 16/9 guess for video until corrected above): with
+      // explicit width+height also set, aspect-ratio should be a no-op per
+      // spec, but WebKit was still resolving width from height using the
+      // stale ratio instead of the explicit width, badly overflowing video
+      // tiles whose real ratio isn't 16/9.
+      item.style.aspectRatio = "auto";
       item.style.width = width + "px";
       item.style.height = height + "px";
       item.style.top = top + "px";
