@@ -23,3 +23,88 @@ hgroup .description p {
 hgroup .description p + p {
   margin-top: 1rem;
 }
+
+/* Video grid tiles: poster frame + play button, click-to-play (see assets/js/custom.js) */
+.video-item {
+  cursor: pointer;
+}
+
+.video-item figure {
+  position: relative;
+  background-color: #000;
+  /* Overrides the figure's own hardcoded aspect-ratio (set in gallery.html
+     as a 16/9 guess before the real ratio is known) so it always exactly
+     fills whatever box gallery.js sizes the parent .gallery-item to. */
+  width: 100%;
+  height: 100%;
+}
+
+.video-item video {
+  display: block;
+  object-fit: contain;
+}
+
+.video-item .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  transform: translate(-50%, -50%);
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+}
+
+.video-item .play-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 0.7rem 0 0.7rem 1.1rem;
+  border-color: transparent transparent transparent #fff;
+}
+
+.video-item.playing .play-icon,
+.video-autoplay .play-icon {
+  display: none;
+}
+
+/* Enlarged on-page video overlay, opened by assets/js/custom.js */
+.video-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.video-overlay video {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.video-overlay-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.video-overlay-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
