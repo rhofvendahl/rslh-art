@@ -1,3 +1,9 @@
+/* Roboto, loaded via Google Fonts link in layouts/partials/head-custom.html
+   (theme default is the ui-sans-serif/system-ui stack in _normalize.scss) */
+html {
+  font-family: "Roboto", ui-sans-serif, system-ui, sans-serif;
+}
+
 /* Square album cover thumbnails (theme default is 3/2) */
 .card > figure,
 .card > img,
