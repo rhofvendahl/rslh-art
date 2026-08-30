@@ -1,0 +1,19 @@
+/* Square album cover thumbnails (theme default is 3/2) */
+.card > figure,
+.card > img,
+.card figure > img {
+  aspect-ratio: 1 / 1;
+}
+
+/* hgroup > .description replaces the theme's hgroup > p (see layouts/partials/title.html);
+   reapply the same text styling and add spacing between multi-paragraph descriptions. */
+hgroup .description p {
+  color: var(--text-2);
+  font-size: 1.0625rem;
+  line-height: 1.5556;
+  text-wrap: balance;
+}
+
+hgroup .description p + p {
+  margin-top: 1rem;
+}

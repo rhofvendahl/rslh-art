@@ -1,3 +1,3 @@
 ---
-title: RSLH Art
+title: Projects
 ---

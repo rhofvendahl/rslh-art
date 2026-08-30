@@ -1,0 +1,11 @@
+{{ if .Title }}
+  <hgroup>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.Description }}
+      {{/* A plain <p> wrapper breaks on multi-paragraph markdown (nested <p>s,
+           and the theme zeroes paragraph margins/relies on flex gap between
+           hgroup's direct children, so nested paragraphs get no spacing). */}}
+      <div class="description">{{ . | markdownify }}</div>
+    {{ end }}
+  </hgroup>
+{{ end }}
