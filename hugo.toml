@@ -2,3 +2,6 @@ baseURL = 'https://rslh.art/'
 locale = 'en-us'
 title = 'RSLH Art'
 theme = 'gallery'
+
+[params]
+  defaultTheme = 'dark'
