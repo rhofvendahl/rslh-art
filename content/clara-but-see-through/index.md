@@ -1,4 +1,5 @@
 ---
 title: Clara But See Through
-date: 2026-08-30
+date: 2019-08-01
+weight: 20
 ---

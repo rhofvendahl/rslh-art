@@ -1,4 +1,4 @@
 ---
 title: Sobbing Man
-date: 2026-08-30
+date: 2025-07-01
 ---
