@@ -1,0 +1,14 @@
+# Hugo build output and cache
+public/
+resources/
+.hugo_build.lock
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Generated
+assets/jsconfig.json
+
+# OS
+.DS_Store
