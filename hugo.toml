@@ -1,6 +1,6 @@
 baseURL = 'https://rslh.art/'
 locale = 'en-us'
-title = 'RSLH Art'
+title = 'RslH Art'
 theme = 'gallery'
 
 [params]
